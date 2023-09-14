@@ -1,14 +1,15 @@
 <% title='Foro' %>
   <%- include('../base/estructura-head.ejs'); %>
     <h1>Post</h1>
-    <a href="post/create">Crear post</a>
+    <button><a href="/post/create">Crear post</a></button>
     <table class="table" border="1">
+      <caption></caption>
       <thead>
         <tr>
-          <td>Titulo</td>
-          <td>Contenido</td>
-          <td>Url de Imagen</td>
-          <td colspan="3">Opciones</td>
+          <th>Titulo</th>
+          <th>Contenido</th>
+          <th>Url de Imagen</th>
+          <th colspan="3">Opciones</th>
         </tr>
       </thead>
       <tbody>
@@ -21,16 +22,16 @@
               <%= post.contenido %>
             </td>
             <td>
-              <%= post.imagen %>
+              <img src="<%= post.imagen %>" alt="<%= post.titulo %>"/>
             </td>
             <td>
-              <a href="user/<%= post.id %>">Ver Post</a>
+              <a href="/post/<%= post.id %>">Ver Post</a>
             </td>
             <td>
-              <a href="user/update/<%= post.id %>">Modificar</a>
+              <a href="/post/update/<%= post.id %>">Modificar</a>
             </td>
             <td>
-              <a href="user/delete/<%= post.id %>">Eliminar</a>
+              <a href="/post/delete/<%= post.id %>">Eliminar</a>
             </td>
           </tr>
           <% } %>
