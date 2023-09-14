@@ -1,28 +1,33 @@
 <% title='Foro' %>
   <%- include('../base/estructura-head.ejs'); %>
-    <h1>Post</h1>
-    <button><a href="/post/create">Crear post</a></button>
-    <table class="table" border="1">
+    <h1 class="text-center">Post</h1>
+    <button><a href="/post/create">Crear post</a></button><br>
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered" border="1">
       <caption></caption>
-      <thead>
-        <tr>
-          <th>Titulo</th>
-          <th>Contenido</th>
-          <th>Url de Imagen</th>
-          <th colspan="3">Opciones</th>
+      <thead class="thead-dark">
+        <tr class="text-center">
+          <th scope="col">Titulo</th>
+          <th scope="col">Contenido</th>
+          <th scope="col">Url de Imagen</th>
+          <th scope="col">Fue Creado</th>
+          <th colspan="3" scope="col" class="table-secondary">Opciones</th>
         </tr>
       </thead>
       <tbody>
         <% for (post of posts ) { %>
           <tr>
-            <td>
+            <td >
               <%= post.titulo %>
             </td>
-            <td>
+            <td class="text-break">
               <%= post.contenido %>
             </td>
             <td>
-              <img src="<%= post.imagen %>" alt="<%= post.titulo %>"/>
+              <img src="<%= post.imagen %>" class="img-thumbnail" width="300" height="300" alt="<%= post.titulo %>"/>
+            </td>
+            <td >
+              <%= post.createdAt %>
             </td>
             <td>
               <a href="/post/<%= post.id %>">Ver Post</a>
@@ -37,4 +42,5 @@
           <% } %>
       </tbody>
     </table>
+  </div>
     <%- include('../base/estructura-foot.ejs'); %>

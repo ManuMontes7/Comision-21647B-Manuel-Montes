@@ -1,10 +1,27 @@
 <% title='Crear post' %>
   <%- include('../base/estructura-head.ejs'); %>
-    <h4>Crear post</h4>
-    <form action="/post/create" method="post">
-      <input placeholder="Titulo" name="titulo" />
-      <input placeholder="" name="contenido" />
-      <input placeholder="URL de la imagen" name="imagen" />
-      <button type="submit">Enviar</button>
-    </form>
+
+  <div class="card">
+    <div class="card-header">
+      <h4>Crear post</h4>
+    </div>
+    <div class="card-body">
+        <form action="/post/create" method="post">
+            <div>
+                <label for="Titulo" class="form-label">Titulo</label>
+                <input type="text" class="form-control" name="titulo">
+            </div>
+            <div>
+                <label for="Descripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" name="contenido">
+            </div>
+            <div>
+                <label for="Imagen" class="form-label">Link de imagen</label>
+                <input type="text" class="form-control" name="imagen">
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+</div>
+
     <%- include('../base/estructura-foot.ejs'); %>

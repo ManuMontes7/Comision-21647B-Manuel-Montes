@@ -4,6 +4,8 @@ const cors = require("cors");
 const morgan = require("morgan");
 const userRoutes = require("./src/routes/user.routes.js");
 const postRoutes = require("./src/routes/post.routes.js");
+require('ejs');
+require('dotenv').config()
 
 const app = express();
 const port = 3000;

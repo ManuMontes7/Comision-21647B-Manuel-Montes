@@ -1,11 +1,27 @@
 <% title='Actualizar usuario' %>
   <%- include('../base/estructura-head.ejs'); %>
-    <h4>Modificar usuario : <%= user.firstName %>
-    </h4>
-    <form action="/user/update/<%= user.id %>" method="post">
-      <input placeholder="Nombre" name="firstName" value="<%= user.firstName %>" />
-      <input placeholder="Apellido" name="lastName" value="<%= user.lastName %>" />
-      <input placeholder="Email" name="email" value="<%= user.email %>" />
-      <button type="submit">Guardar</button>
-    </form>
+
+  <div class="card">
+    <div class="card-header">
+      <h4>Modificar usuario: <%= user.firstName %></h4>
+    </div>
+    <div class="card-body">
+        <form action="/user/update/<%= user.id %>" method="post">
+            <div>
+                <label for="Nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="firstName" value="<%= user.firstName %>">
+            </div>
+            <div>
+                <label for="Apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" name="lastName" value="<%= user.lastName %>">
+            </div>
+            <div>
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" value="<%= user.email %>">
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+</div>
+
     <%- include('../base/estructura-foot.ejs'); %>

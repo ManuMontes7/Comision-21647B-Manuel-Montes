@@ -1,11 +1,26 @@
 <% title='Actualizar post' %>
   <%- include('../base/estructura-head.ejs'); %>
-    <h4>Modificar post : <%= post.titulo %>
-    </h4>
-    <form action="/post/update/<%= post.id %>" method="post">
-      <input placeholder="Titulo" name="titulo" value="<%= post.titulo %>" />
-      <input placeholder="" name="contenido" value="<%= post.contenido %>" />
-      <input placeholder="URL de Imagen" name="imagen" value="<%= post.imagen %>" />
-      <button type="submit">Guardar</button>
-    </form>
+  <div class="card">
+    <div class="card-header">
+      <h4>Modificar: <%= post.titulo %></h4>
+    </div>
+    <div class="card-body">
+        <form action="/post/update/<%= post.id %>" method="post">
+            <div>
+                <label for="Titulo" class="form-label">Titulo</label>
+                <input type="text" class="form-control" name="titulo" value="<%= post.titulo %>">
+            </div>
+            <div>
+                <label for="Descripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" name="contenido" value="<%= post.contenido %>">
+            </div>
+            <div>
+                <label for="Imagen" class="form-label">Link de imagen</label>
+                <input type="text" class="form-control" name="imagen" value="<%= post.imagen %>">
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+</div>
     <%- include('../base/estructura-foot.ejs'); %>
+

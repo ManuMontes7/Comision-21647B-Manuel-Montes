@@ -1,10 +1,27 @@
 <% title='Crear usuario' %>
   <%- include('../base/estructura-head.ejs'); %>
-    <h4>Crear usuario</h4>
-    <form action="/user/create" method="post">
-      <input placeholder="Nombre" name="firstName" />
-      <input placeholder="Apellido" name="lastName" />
-      <input placeholder="Email" name="email" />
-      <button type="submit">Enviar</button>
-    </form>
+  
+  <div class="card">
+    <div class="card-header">
+      <h4>Crear usuario</h4>
+    </div>
+    <div class="card-body">
+        <form action="/user/create" method="post">
+            <div>
+                <label for="Nombre" class="form-label">Titulo</label>
+                <input type="text" class="form-control" name="firstName">
+            </div>
+            <div>
+                <label for="Apellido" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" name="lastName">
+            </div>
+            <div>
+                <label for="Email" class="form-label">Link de imagen</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+</div>
+
     <%- include('../base/estructura-foot.ejs'); %>

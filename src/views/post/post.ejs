@@ -1,15 +1,18 @@
 <% title='Ver Post' %>
   <%- include('../base/estructura-head.ejs'); %>
-    <h1>:Post n <%= post.id %>
-    </h1>
-    <p>
-      <%= post.titulo %>
-    </p>
-    <p>
-      <%= post.contenido %>
-    </p>
-    <p>
-      <%= post.imagen %>
-    </p>
-    <p><a href="/post">Volver</a></p>
+    <div class="card">
+      <h1>Post # <%= post.id %>
+      </h1>
+      <p>
+        <%= post.titulo %>
+      </p>
+      <p class="text-break">
+        <%= post.contenido %>
+      </p>
+      <img src="<%= post.imagen %>">
+      <p>
+        <%= post.createdAt %>
+      </p>
+      <p><a href="/post">Volver</a></p>
+    </div>
     <%- include('../base/estructura-foot.ejs'); %>
