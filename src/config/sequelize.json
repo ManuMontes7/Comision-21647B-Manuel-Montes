@@ -9,7 +9,7 @@
   "test": {
     "username": "root",
     "password": null,
-    "database": "databaseforo_epica_test",
+    "database": "foro_epica_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

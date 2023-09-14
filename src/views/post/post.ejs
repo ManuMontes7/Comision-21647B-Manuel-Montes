@@ -1,0 +1,15 @@
+<% title='Ver Post' %>
+  <%- include('../base/estructura-head.ejs'); %>
+    <h1>:Post n <%= post.id %>
+    </h1>
+    <p>
+      <%= post.titulo %>
+    </p>
+    <p>
+      <%= post.contenido %>
+    </p>
+    <p>
+      <%= post.imagen %>
+    </p>
+    <p><a href="/post">Volver</a></p>
+    <%- include('../base/estructura-foot.ejs'); %>

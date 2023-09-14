@@ -3,9 +3,9 @@
     <h4>Modificar usuario : <%= user.firstName %>
     </h4>
     <form action="/user/update/<%= user.id %>" method="post">
-      <input placeholder="first name" name="firstName" value="<%= user.firstName %>" />
-      <input placeholder="last name" name="lastName" value="<%= user.lastName %>" />
-      <input placeholder="email" name="email" value="<%= user.email %>" />
+      <input placeholder="Nombre" name="firstName" value="<%= user.firstName %>" />
+      <input placeholder="Apellido" name="lastName" value="<%= user.lastName %>" />
+      <input placeholder="Email" name="email" value="<%= user.email %>" />
       <button type="submit">Guardar</button>
     </form>
     <%- include('../base/estructura-foot.ejs'); %>

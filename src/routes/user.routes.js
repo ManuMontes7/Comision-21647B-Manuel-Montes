@@ -10,6 +10,6 @@ routes.get('/delete/:id', renderDeleteUser)
 routes.get('/update/:id', renderUpdateUser)
 routes.post('/update/:id', updateUser)
 routes.get('/:id', getUserById)
-routes.delete('/:id', deleteUser)
+routes.delete('/delete/:id', deleteUser)
 
 module.exports = routes

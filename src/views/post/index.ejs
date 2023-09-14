@@ -1,36 +1,36 @@
-<% title='Tabla de usuarios' %>
+<% title='Foro' %>
   <%- include('../base/estructura-head.ejs'); %>
-    <h1>Tabla usuarios</h1>
-    <a href="user/create">Crear usuario</a>
+    <h1>Post</h1>
+    <a href="post/create">Crear post</a>
     <table class="table" border="1">
       <thead>
         <tr>
-          <td>Nombre</td>
-          <td>Apellido</td>
-          <td>Email</td>
+          <td>Titulo</td>
+          <td>Contenido</td>
+          <td>Url de Imagen</td>
           <td colspan="3">Opciones</td>
         </tr>
       </thead>
       <tbody>
-        <% for (user of users ) { %>
+        <% for (post of posts ) { %>
           <tr>
             <td>
-              <%= user.firstName %>
+              <%= post.titulo %>
             </td>
             <td>
-              <%= user.lastName %>
+              <%= post.contenido %>
             </td>
             <td>
-              <%= user.email %>
+              <%= post.imagen %>
             </td>
             <td>
-              <a href="user/<%= user.id %>">Ver Usuario</a>
+              <a href="user/<%= post.id %>">Ver Post</a>
             </td>
             <td>
-              <a href="user/update/<%= user.id %>">Modificar</a>
+              <a href="user/update/<%= post.id %>">Modificar</a>
             </td>
             <td>
-              <a href="user/delete/<%= user.id %>">Eliminar</a>
+              <a href="user/delete/<%= post.id %>">Eliminar</a>
             </td>
           </tr>
           <% } %>

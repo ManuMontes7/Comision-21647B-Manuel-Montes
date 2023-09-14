@@ -1,0 +1,10 @@
+<% title='Crear post' %>
+  <%- include('../base/estructura-head.ejs'); %>
+    <h4>Crear post</h4>
+    <form action="/post/create" method="post">
+      <input placeholder="Titulo" name="titulo" />
+      <input placeholder="" name="contenido" />
+      <input placeholder="URL de la imagen" name="imagen" />
+      <button type="submit">Enviar</button>
+    </form>
+    <%- include('../base/estructura-foot.ejs'); %>
