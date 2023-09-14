@@ -1,5 +1,6 @@
 <% title='Ver Post' %>
   <%- include('../base/estructura-head.ejs'); %>
+  <div class="container">
     <div class="card">
       <h1>Post # <%= post.id %>
       </h1>
@@ -9,10 +10,11 @@
       <p class="text-break">
         <%= post.contenido %>
       </p>
-      <img src="<%= post.imagen %>">
+      <img src="<%= post.imagen %>" alt="<%= post.titulo %>">
       <p>
         <%= post.createdAt %>
       </p>
       <p><a href="/post">Volver</a></p>
     </div>
+  </div>
     <%- include('../base/estructura-foot.ejs'); %>

@@ -34,8 +34,6 @@ app.get("/", function (req, res) {
   res.render("base/index");
 });
 
-//app.use('/img',express.static("/img/"));
-
 app.listen(port, async () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
 });

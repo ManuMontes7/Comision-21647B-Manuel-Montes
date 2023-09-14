@@ -1,7 +1,8 @@
 <% title='Tabla de usuarios' %>
   <%- include('../base/estructura-head.ejs'); %>
+  <div class="container">
     <h1 class="text-center">Tabla usuarios</h1>
-    <button><a href="/user/create">Crear usuario</a></button>
+    <button class="btn btn-outline-primary"><a href="/user/create">Crear usuario</a></button>
     <div class="table-responsive">
     <table class="table table-striped table-bordered" border="1">
       <caption></caption>
@@ -39,4 +40,5 @@
       </tbody>
     </table>
     </div>
+  </div>
     <%- include('../base/estructura-foot.ejs'); %>

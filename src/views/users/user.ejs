@@ -1,5 +1,6 @@
 <% title='Ver usuario' %>
   <%- include('../base/estructura-head.ejs'); %>
+  <div class="container">
     <h1>Informacion del usuario: <%= user.firstName %>
     </h1>
     <p>
@@ -12,4 +13,5 @@
       <%= user.email %>
     </p>
     <p><a href="/user">Volver</a></p>
+  </div>
     <%- include('../base/estructura-foot.ejs'); %>

@@ -1,17 +1,11 @@
 const Post = require("../models").Post;
-const User = require("../models").User;
+//const User = require("../models").User;
 const controller = {};
 
 controller.getAllPosts = async (req, res) => {
   try {
-    const posts = await Post.findAll({
-      include: [
-        {
-          model: User,
-          as: "Autor",
-        },
-      ],
-    });
+    const posts = await Post.findAll();
+    //({include: [{model: User, as: "Autor",},],});
     //res.status(200).json(posts);
     return res.render("post", { posts });
   } catch (error) {
@@ -47,9 +41,14 @@ controller.renderCreatePost = (req, res) => {
 };
 
 controller.createPost = async (req, res) => {
+  const { titulo, contenido, imagen } = req.body;
   try {
-    const post = await Post.create(req.body);
-    res.status(201).json(post);
+    await Post.create({
+      titulo,
+      contenido,
+      imagen,
+    });
+    return res.redirect("/post");
   } catch (error) {
     console.log(error);
     return res.status(500).json({ error: "Error al crear Post" });
